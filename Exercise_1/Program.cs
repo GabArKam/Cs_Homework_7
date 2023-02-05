@@ -8,22 +8,23 @@ Console.Write("Введите количество строк: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
 int cols = Convert.ToInt32(Console.ReadLine());
-int[,] array = new int[rows, cols];
+double[,] array = new double[rows, cols];
 
 
-void FillArray(int[,] array)
+void FillArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
         for (int j = 0; j < array.GetLength(1); j++)
-            array[i, j] = new Random().Next(-10, 11);
+            array[i, j] = new Random().Next(-10, 11 *100);
 }
 
-void PrintArray(int[,] array)
+void PrintArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
-            Console.Write($"{array[i, j]} \t");
+
+            Console.Write($"{array[i, j]/100:f1} \t");
         Console.WriteLine();
     }
     Console.WriteLine();
