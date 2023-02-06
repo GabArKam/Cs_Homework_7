@@ -34,7 +34,7 @@ void Average(int[,] array)
         if (j == array.GetLength(1) - 1) 
             {
                 average = sum / array.GetLength(1);
-                Console.WriteLine($"Среднее арифметическое столбца {j} равно {average:f1}");
+                Console.WriteLine($"Среднее арифметическое столбца {i} равно {average:f1}");
                 sum = 0;
             }
         }           
